@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar dist/app-jar-with-dependencies.jar
+web: java $JAVA_OPTS -cp target/dependency/*:target/classes com.jamesward.App
