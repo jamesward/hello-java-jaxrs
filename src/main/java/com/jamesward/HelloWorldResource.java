@@ -6,7 +6,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/hello")
-public class HelloWorld {
+public class HelloWorldResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -15,7 +15,7 @@ public class HelloWorld {
         message.value = "hello, world";
         return message;
     }
-    
+
     static class Message {
         public String value;
     }
