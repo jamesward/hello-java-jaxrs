@@ -13,7 +13,7 @@ public class App {
 
     public static void main(String[] args) {
         final String port = System.getenv("PORT")!=null ? System.getenv("PORT") : "9998";
-        final URI apiUri = URI.create(String.format("http://localhost:%s/api", port));
+        final URI apiUri = URI.create(String.format("http://0.0.0.0:%s/api", port));
 
         final ResourceConfig resourceConfig = new ResourceConfig(HelloWorldResource.class);
         HttpHandler httpHandler = new CLStaticHttpHandler(HttpServer.class.getClassLoader(), "/META-INF/resources/");
